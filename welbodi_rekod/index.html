@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Patient Portal</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    
+    <div class="header">
+        <img src="images/Logo-removebg-preview.png" alt="Welbodi Logo" class="logo"> 
+        <h1>Wɛlbɔdi Rɛkɔd</h1>
+    </div>
+    
+    <div class="login-container">
+        <h2>Patient Portal Login</h2>
+        <form action="dashboard.html" method="GET">
+            <label for="idOrPin">Enter ID or PIN:</label>
+            <input type="text" id="idOrPin" name="idOrPin" required> 
+            <button type="submit">Login</button> 
+        </form>
+        
+        <div class="register-container">
+            <p>New patient? Register here:</p>
+            <a href="registration.html">
+                <button type="button">Register New Patient</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

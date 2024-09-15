@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Patient Portal</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+   
+    <div class="navbar">
+        <a href="update-profile.html">Update Profile</a>
+        <a href="index.html">Logout</a>
+    </div>
+    
+
+   
+    <div class="dashboard-container">
+        <h2>Patient Dashboard</h2>
+
+        
+        <div class="tabs">
+            <button class="tab-button active" onclick="openTab('record1')">Patient Record 1</button>
+            <button class="tab-button" onclick="openTab('record2')">Patient Record 2</button>
+            <button class="tab-button" onclick="openTab('record3')">Patient Record 3</button>
+        </div>
+
+        
+        <div id="record1" class="tab-content active">
+            <h3 class="record-title">Patient Record 1</h3>
+            <div class="profile-photo">
+                <img src="images/aluzay.jpeg" alt="Patient Photo">
+            </div>
+            <div class="section">
+                <h3>Personal Details</h3>
+                <p>Name: Alusine Kuyateh</p>
+                <p>Date of Birth: 02/11/1999</p>
+                <p>Contact: 078656832</p>
+                <p>Email: alusine@gmail.com</p>
+            </div>
+            <div class="section">
+                <h3>Hospital Visited</h3>
+                <p>Hospital Name: Freetown International Hospital</p>
+                <p>Date of Visit: 08/2/2023</p>
+            </div>
+            <div class="section">
+                <h3>Diagnosis</h3>
+                <p>Diagnosis Details: Peptic ulcer</p>
+                
+                <div class="diagnosis-results">
+                    <h4>Diagnosis Results:</h4>
+                    <a href="results/medical result.pdf" target="_blank">View PDF Result</a>
+                    <div class="embedded-image">
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h3>Medication</h3>
+                <p>Medication Prescribed: Omeprazole, Amoxicillin</p>
+            </div>
+            <div class="section">
+                <h3>Doctor's Details</h3>
+                <p>Doctor's Name: Dr. Amadu Kargbo</p>
+                <p>Contact Info: amadu@gmail.com</p>
+            </div>
+        </div>
+
+        
+        <div id="record2" class="tab-content">
+            <h3 class="record-title">Patient Record 2</h3>
+            <div class="profile-photo">
+                <img src="images/aluzay.jpeg" alt="Patient Photo">
+            </div>
+            <div class="section">
+                <h3>Personal Details</h3>
+                <p>Name: Alusine Kuyateh</p>
+                <p>Date of Birth: 02/11/1999</p>
+                <p>Contact: 078656832</p>
+                <p>Email: alusine@gmail.com</p>
+            </div>
+            <div class="section">
+                <h3>Hospital Visited</h3>
+                <p>Hospital Name: Life Care Hospital</p>
+                <p>Date of Visit: 04/10/2023</p>
+            </div>
+            <div class="section">
+                <h3>Diagnosis</h3>
+                <p>Diagnosis Details: Hypertension</p>
+                
+                <div class="diagnosis-results">
+                    <h4>Diagnosis Results:</h4>
+                    <a href="results/medical result.pdf" target="_blank">View PDF Result</a>
+                    <div class="embedded-image">
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h3>Medication</h3>
+                <p>Medication Prescribed: Lisinopril, Amlodipine</p>
+            </div>
+            <div class="section">
+                <h3>Doctor's Details</h3>
+                <p>Doctor's Name: Dr. Alhaji A. Bah</p>
+                <p>Contact Info: alhaji@gmail.com</p>
+            </div>
+        </div>
+
+        
+        <div id="record3" class="tab-content">
+            <h3 class="record-title">Patient Record 3</h3>
+            <div class="profile-photo">
+                <img src="images/aluzay.jpeg" alt="Patient Photo">
+            </div>
+            <div class="section">
+                <h3>Personal Details</h3>
+                <p>Name: Alusine Kuyateh</p>
+                <p>Date of Birth: 02/11/1999</p>
+                <p>Contact: 078656832</p>
+                <p>Email: alusine@gmail.com</p>
+            </div>
+            <div class="section">
+                <h3>Hospital Visited</h3>
+                <p>Hospital Name: Choithram Memorial Hospital</p>
+                <p>Date of Visit: 09/04/2024</p>
+            </div>
+            <div class="section">
+                <h3>Diagnosis</h3>
+                <p>Diagnosis Details: Type 2 Diabetes</p>
+                
+                <div class="diagnosis-results">
+                    <h4>Diagnosis Results:</h4>
+                    <a href="results/medical result.pdf" target="_blank">View PDF Result</a>
+                    <div class="embedded-image">
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <h3>Medication</h3>
+                <p>Medication Prescribed: Metformin</p>
+            </div>
+            <div class="section">
+                <h3>Doctor's Details</h3>
+                <p>Doctor's Name: Ishaka Kargbo</p>
+                <p>Contact Info: Ishaka@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openTab(tabId) {
+            // Hide all tabs
+            var tabs = document.getElementsByClassName('tab-content');
+            for (var i = 0; i < tabs.length; i++) {
+                tabs[i].style.display = 'none';
+            }
+
+            // Remove 'active' class from all tab buttons
+            var buttons = document.getElementsByClassName('tab-button');
+            for (var i = 0; i < buttons.length; i++) {
+                buttons[i].className = buttons[i].className.replace(' active', '');
+            }
+
+            // Show the selected tab and add 'active' class to the corresponding button
+            document.getElementById(tabId).style.display = 'block';
+            event.currentTarget.className += ' active';
+        }
+
+        // Set default active tab
+        document.getElementById('record1').style.display = 'block';
+    </script>
+</body>
+</html>
